@@ -1,38 +1,49 @@
 package com.company.service;
 
+import com.company.model.Student;
 import com.company.service.impl.PersonManagerImpl;
+import com.company.service.impl.StudentManagerImpl;
 
 import java.util.Scanner;
 
 public class main {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
-            PersonManagerImpl personManager = new PersonManagerImpl();
+            StudentManagerImpl studentManager = new StudentManagerImpl();
             while (true){
                 display();
                 System.out.println("Nhập lựa chọn:");
                 int choice = sc.nextInt();
                 switch (choice){
                     case 1:
-                        personManager.add();
+                        studentManager.add(getStudent());
                         break;
                     case 2:
-                        personManager.delete();
+                        System.out.print("Nhập Id học viên cần xóa : ");
+                        int id = sc.nextInt();
+                        sc.nextLine();
+                        studentManager.delete(id);
                         break;
                     case 3:
-                        personManager.print();
+                        studentManager.print();
                         break;
                     case 4:
-                       personManager.findPersonByName();
+                        String name;
+                        System.out.print("Nhập tên học viên cần tìm : ");
+                        name = sc.nextLine();
+                        studentManager.findPersonByName(name);
                         break;
                     case 5:
-                        personManager.update();
+                        System.out.print("Nhập Id học viên cần sửa thông tin: ");
+                        int idUpdate = sc.nextInt();
+                        sc.nextLine();
+                        studentManager.update(idUpdate,getStudent());
                         break;
                     case 6:
-                        personManager.sort();
+                        studentManager.sort();
                         break;
                     case 7:
-                        personManager.sumCal();
+                        studentManager.sumCal();
                         break;
                     case 0:
                         System.exit(0);
@@ -51,5 +62,19 @@ public class main {
             System.out.println("7. Tính tổng điểm trung bình của các học viên");
             System.out.println("0. Thoát");
 
+        }
+
+        public static Student getStudent(){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Nhập tên học viên: ");
+            String name = sc.nextLine();
+            System.out.print("Nhập tuổi học viên: ");
+            int age = sc.nextInt();
+            sc.nextLine();
+            System.out.print("Nhập điểm trung bình của học viên:");
+            double score = sc.nextDouble();
+            sc.nextLine();
+            Student student = new Student(name,age,score);
+            return student;
         }
 }

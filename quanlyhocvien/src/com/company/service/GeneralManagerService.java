@@ -1,17 +1,17 @@
 package com.company.service;
 
 public interface GeneralManagerService<T> {
-    void add();
+    void add(T t);
 
     int findIndexById(int id);
 
-    void update ();
+    void update (int id, T t);
 
-    void delete();
+    void delete(int id);
 
     void print();
 
-    void findPersonByName();
+    void findPersonByName(String name);
 
     void sort();
 }

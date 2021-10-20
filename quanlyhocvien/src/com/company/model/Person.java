@@ -47,4 +47,6 @@ public abstract class Person {
                 ", age=" + age +
                 '}';
     }
+
+    public abstract double getScore();
 }
