@@ -53,7 +53,7 @@ public class main {
                             studentManager.sortByScore();
                             break;
                         case 7:
-                            studentManager.sumScore();
+                            studentManager.calScore();
                             break;
                         case 0:
                             System.exit(0);

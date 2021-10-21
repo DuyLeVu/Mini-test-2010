@@ -26,7 +26,7 @@ public class StudentManagerImpl extends PersonManagerImpl{
             listStudent.sort((s1,s2) -> (int) (s1.getScore() - s2.getScore()));
         }
 
-    public void sumScore(){
+    public void calScore(){
         double totalScore = 0;
         for (int i=0; i<listStudent.size(); i++){
             totalScore += listStudent.get(i).getScore();
