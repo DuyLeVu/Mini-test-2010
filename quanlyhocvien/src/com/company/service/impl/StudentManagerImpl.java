@@ -9,13 +9,11 @@ import java.util.Comparator;
 
 public class StudentManagerImpl extends PersonManagerImpl{
 
-    private ArrayList<Student> listStudent;
+    private ArrayList<Person> listStudent;
 
-    public StudentManagerImpl(ArrayList<Student> listStudent) {
-        this.listStudent = listStudent;
+    public StudentManagerImpl() {
+        listStudent = getListPerson();
     }
-
-
 
     @Override
     public void update(int id, Person person) {

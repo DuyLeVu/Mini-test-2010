@@ -49,4 +49,10 @@ public abstract class Person {
     }
 
     public abstract double getScore();
+
+    public abstract void setScore(double score);
+
+    public abstract double getSalary();
+
+    public abstract void setSalary(double salary);
 }

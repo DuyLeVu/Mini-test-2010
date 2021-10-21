@@ -2,7 +2,6 @@ package com.company.model;
 
 public class Student extends Person {
     private double score;
-
     public Student() {
     }
 
@@ -22,6 +21,16 @@ public class Student extends Person {
 
     public void setScore(double score) {
         this.score = score;
+    }
+
+    @Override
+    public double getSalary() {
+        return 0;
+    }
+
+    @Override
+    public void setSalary(double salary) {
+
     }
 
     @Override
