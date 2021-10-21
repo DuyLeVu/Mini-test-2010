@@ -15,115 +15,86 @@ public class main {
         StudentManagerImpl studentManager = new StudentManagerImpl();
         TeacherManagerImpl teacherManager = new TeacherManagerImpl();
         while (true) {
-//            menuDisplay();
-//            System.out.println("Nhập lựa chọn:");
-//            int choice = sc.nextInt();
-//            switch (choice) {
-//                case 1:
-//                    display();
-//                    int obj = sc.nextInt();
-//                    switch (obj) {
-//                        case 1:
-//                            studentManager.add(getStudent());
-//                            break;
-//                        case 2:
-//                            studentManager.add(getTeacher());
-//                            break;
-//                    }
-//                case 2:
-//                    System.out.print("Nhập Id cần xóa : ");
-//                    int id = sc.nextInt();
-//                    sc.nextLine();
-//                    personManager.delete(id);
-//                    break;
-//                case 3:
-//                    personManager.print();
-//                    break;
-//                case 4:
-//                    String name;
-//                    System.out.print("Nhập tên học viên cần tìm : ");
-//                    name = sc.nextLine();
-//                    studentManager.findPersonByName(name);
-//                    break;
-//                case 5:
-//                    System.out.print("Nhập Id học viên cần sửa thông tin: ");
-//                    int idUpdate = sc.nextInt();
-//                    sc.nextLine();
-//                    studentManager.update(idUpdate, getStudent());
-//                    break;
-//                case 6:
-//                    studentManager.sort();
-//                    break;
-//                case 7:
-//                    studentManager.sumCal();
-//                    break;
-//                case 0:
-//                    System.exit(0);
-//            }
-//        }
             display();
             System.out.println("Nhập lựa chọn:");
             int choiceObj = sc.nextInt();
             switch (choiceObj) {
-                case 1 -> {
+                case 1:
                     displayMenuStudent();
                     System.out.println("Nhập lựa chọn:");
                     int choiceStudent = sc.nextInt();
                     switch (choiceStudent) {
-                        case 1 -> studentManager.add(getStudent());
-                        case 2 -> {
+                        case 1:
+//                            personManager.add(getStudent());
+                            studentManager.add(getStudent());
+                            break;
+                        case 2:
                             System.out.print("Nhập Id cần xóa : ");
                             int id = sc.nextInt();
                             sc.nextLine();
                             studentManager.delete(id);
-                        }
-                        case 3 -> studentManager.print();
-                        case 4 -> {
+                            break;
+                        case 3:
+                            studentManager.print();
+                            break;
+                        case 4:
                             String name;
                             System.out.print("Nhập tên học viên cần tìm : ");
                             name = sc.nextLine();
                             studentManager.findPersonByName(name);
-                        }
-                        case 5 -> {
+                            break;
+                        case 5:
                             System.out.print("Nhập Id học viên cần sửa thông tin: ");
                             int idUpdate = sc.nextInt();
                             sc.nextLine();
                             studentManager.update(idUpdate, getStudent());
-                        }
-                        case 6 -> studentManager.sort();
-                        case 7 -> studentManager.sumCal();
-                        case 0 -> System.exit(0);
+                            break;
+                        case 6:
+                            studentManager.sort();
+                            break;
+                        case 7:
+                            studentManager.sumCal();
+                            break;
+                        case 0:
+                            System.exit(0);
                     }
-                }
-                case 2 -> {
+                    break;
+                case 2:
                     displayMenuTeacher();
                     System.out.println("Nhập lựa chọn:");
                     int choiceTeacher = sc.nextInt();
                     switch (choiceTeacher) {
-                        case 1 -> teacherManager.add(getTeacher());
-                        case 2 -> {
+                        case 1:
+                            teacherManager.add(getTeacher());
+                            break;
+                        case 2:
                             System.out.print("Nhập Id cần xóa : ");
                             int id = sc.nextInt();
                             sc.nextLine();
                             teacherManager.delete(id);
-                        }
-                        case 3 -> teacherManager.print();
-                        case 4 -> {
+                            break;
+                        case 3:
+                            teacherManager.print();
+                            break;
+                        case 4:
                             String name;
                             System.out.print("Nhập tên học viên cần tìm : ");
                             name = sc.nextLine();
                             teacherManager.findPersonByName(name);
-                        }
-                        case 5 -> {
+                            break;
+                        case 5:
                             System.out.print("Nhập Id học viên cần sửa thông tin: ");
                             int idUpdate = sc.nextInt();
                             sc.nextLine();
                             teacherManager.update(idUpdate, getStudent());
-                        }
-                        case 6 -> teacherManager.sort();
-                        case 0 -> System.exit(0);
+                            break;
+                        case 6:
+                            teacherManager.sort();
+                            break;
+                        case 0:
+                            System.exit(0);
                     }
-                }
+                    break;
             }
         }
 
