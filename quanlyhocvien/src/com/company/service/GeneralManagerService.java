@@ -13,5 +13,5 @@ public interface GeneralManagerService<T> {
 
     void findPersonByName(String name);
 
-    void sort();
+    void sortByName();
 }

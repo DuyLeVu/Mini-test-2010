@@ -112,7 +112,7 @@ public  class PersonManagerImpl implements GeneralManagerService<Person> {
     }
 
     @Override
-    public void sort() {
+    public void sortByName() {
         listPerson.sort(Comparator.comparing(Person::getName));
     }
 

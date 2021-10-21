@@ -50,10 +50,10 @@ public class main {
                             studentManager.update(idUpdate, getStudent());
                             break;
                         case 6:
-                            studentManager.sort();
+                            studentManager.sortByScore();
                             break;
                         case 7:
-                            studentManager.sumCal();
+                            studentManager.sumScore();
                             break;
                         case 0:
                             System.exit(0);
@@ -89,7 +89,7 @@ public class main {
                             teacherManager.update(idUpdate, getStudent());
                             break;
                         case 6:
-                            teacherManager.sort();
+                            teacherManager.sortByName();
                             break;
                         case 0:
                             System.exit(0);

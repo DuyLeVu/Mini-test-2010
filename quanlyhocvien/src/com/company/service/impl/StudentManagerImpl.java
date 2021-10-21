@@ -22,16 +22,15 @@ public class StudentManagerImpl extends PersonManagerImpl{
         listStudent.get(index).setScore(person.getScore());
     }
 
-    @Override
-    public void sort() {
+    public void sortByScore() {
             listStudent.sort((s1,s2) -> (int) (s1.getScore() - s2.getScore()));
         }
 
-    public void sumCal(){
-        double sum = 0;
+    public void sumScore(){
+        double totalScore = 0;
         for (int i=0; i<listStudent.size(); i++){
-            sum += listStudent.get(i).getScore();
+            totalScore += listStudent.get(i).getScore();
         }
-        System.out.println("Điểm trung bình của tất cả học viên = " +sum);
+        System.out.println("Điểm trung bình của tất cả học viên = " +totalScore);
     }
 }
